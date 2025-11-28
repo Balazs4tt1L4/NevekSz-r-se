@@ -6,7 +6,7 @@
         {
             List<string> nevek = new List<string>();
             nevek.Add("Kiss István");
-            nevek.Add("Nagy Elemér");
+            nevek.Add("Nagy elemér");
             nevek.Add("kissándorjózsef23");
             nevek.Add(" Tóth# Ilona");
             nevek.Add("Balázs Attila");
@@ -35,7 +35,22 @@
                 }
                 else if (valaszt == "2")
                 {
-                    //2
+                    Console.Clear();
+                    foreach (String nev in nevek)
+                    {
+                        string[] darabok = nev.TrimStart().Split(' ');
+                        bool jo = true;
+                        foreach (String nevdarab in darabok)
+                            { 
+                                //elemer
+                                if (!char.IsUpper(nevdarab.TrimStart()[0]))
+                                    jo = false;
+                            }
+                        if (jo)
+                            {
+                                Console.WriteLine(nev.TrimStart());
+                            }
+                    }
                 }
                 else if (valaszt == "3")
                 {
