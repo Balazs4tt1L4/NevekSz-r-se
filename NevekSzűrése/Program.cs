@@ -4,6 +4,12 @@
     {
         static void Main(string[] args)
         {
+            List<string> nevek = new List<string>();
+            nevek.Add("Kiss István");
+            nevek.Add("Nagy Elemér");
+            nevek.Add("kissándorjózsef23");
+            nevek.Add(" Tóth# Ilona");
+            nevek.Add("Balázs Attila");
             while (true)
             {
                 Console.Clear();
