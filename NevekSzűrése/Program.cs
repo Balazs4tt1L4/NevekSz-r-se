@@ -89,7 +89,7 @@
                         }
                         if (jo)
                         {
-                            Console.WriteLine(nev.TrimStart());
+                            Console.WriteLine(nev);
                         }
                     }
                 }
@@ -101,13 +101,36 @@
                     {
                         if (nev.Contains(" "))
                         {
-                            Console.WriteLine(nev.TrimStart());
+                            Console.WriteLine(nev);
                         }
                     }
                 }
                 else if (valaszt == "6")
                 {
-                    //6
+                    //Csak rendes nevek
+                    Console.Clear();
+                    foreach(string nev in nevek)
+                    {
+                        bool jo = true;
+                        foreach (char betu in nev)
+                        {
+                            if (!char.IsLetter(betu) && betu != ' ')
+                            {
+                                jo = false;
+                            }
+                        }
+                        //nagybetű vizsgálat
+                        string[] darabok = nev.TrimStart().Split(' ');
+                        foreach (String nevdarab in darabok)
+                        {
+                            if (!char.IsUpper(nevdarab.TrimStart()[0]))
+                                jo = false;
+                        }
+                        if (jo)
+                            {
+                                Console.WriteLine(nev);
+                            }
+                    }
                 }
                 else
                 {
