@@ -95,7 +95,15 @@
                 }
                 else if (valaszt == "5")
                 {
-                    //5
+                    Console.Clear();
+                    //Legalább egy szóközt tartalmazók
+                    foreach (var nev in nevek)
+                    {
+                        if (nev.Contains(" "))
+                        {
+                            Console.WriteLine(nev.TrimStart());
+                        }
+                    }
                 }
                 else if (valaszt == "6")
                 {
