@@ -54,8 +54,9 @@
                 }
                 else if (valaszt == "3")
                 {
+                    Console.Clear();
                     //Csak számjegyek nélküliek
-                    
+
                     foreach (var nev in nevek)
                     {
                         bool jo = true;
@@ -73,8 +74,24 @@
                     }
                 }
                 else if (valaszt == "4")
+                //Csak speciális jel nélküliek
                 {
-                    //4
+                    Console.Clear();
+                    foreach (var nev in nevek)
+                    {
+                        bool jo = true;
+                        foreach (var betu in nev)
+                        {
+                            if (!(char.IsLetterOrDigit(betu) || betu == ' '))
+                            {
+                                jo = false;
+                            }
+                        }
+                        if (jo)
+                        {
+                            Console.WriteLine(nev.TrimStart());
+                        }
+                    }
                 }
                 else if (valaszt == "5")
                 {
